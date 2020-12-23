@@ -36,4 +36,10 @@ bool is_finished()
   else return false;
 
   }
+  void reset()
+  {
+    _num = 0;
+
+  }
+
 }

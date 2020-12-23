@@ -85,7 +85,7 @@ class _HomeState extends State<Home> {
            title: 'تهانينا!',
            desc: 'لقد انتهيت من الاختبار',
          ).show();
-
+         emojis.reset();
          Score.clear();
          urscore=0;
         index++;
