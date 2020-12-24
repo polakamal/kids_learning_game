@@ -5,9 +5,6 @@ import 'quiz_brain.dart';
 
 QuizBrain quizBrain = QuizBrain();
 int score = 0;
-
-void main() => runApp(Quizzler());
-
 class Quizzler extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -66,7 +63,7 @@ class _QuizPageState extends State<QuizPage> {
           score++;
           scoreKeeper.add(Icon(
             Icons.check,
-            color: Colors.green,
+            color: Colors.grey,
           ));
         } else {
           scoreKeeper.add(Icon(
@@ -101,7 +98,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(15.0),
             child: FlatButton(
               textColor: Colors.white,
-              color: Colors.green,
+              color: Colors.white54,
               child: Text(
                 quizBrain.getChoiceOne(),
                 style: TextStyle(
