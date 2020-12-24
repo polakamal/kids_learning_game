@@ -2,6 +2,8 @@ import 'dart:math';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:flutter/material.dart';
 import 'emoji.dart';
+import 'package:audioplayers/audio_cache.dart';
+import 'package:audioplayers/audioplayers.dart';
 emoji emojis = emoji();
 class Home extends StatefulWidget {
   @override
@@ -13,6 +15,7 @@ class _HomeState extends State<Home> {
   final Map<String,String>choices = emojis.get_emoji();
   int index =0;
    int urscore=0;
+  final player = AudioCache();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,6 +94,7 @@ class _HomeState extends State<Home> {
         index++;
        }else
          {
+           player.play('applause8.wav');
            emojis.next_Question();
            Score[element]= true;
            urscore++;

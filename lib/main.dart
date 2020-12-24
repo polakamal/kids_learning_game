@@ -25,47 +25,72 @@ class _mainscreenState extends State<mainscreen> {
         centerTitle: true,
         backgroundColor: Colors.grey,
       ),
-      body: new Column(
-        children: [
-             Center(
-              child : FlatButton(
-             textColor: Colors.white,
-             color: Colors.blueGrey,
-               child: Text(
-              "اللعبة الأولى",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-                fontSize: 40.0,
+        body: Center(
+          child: Row(
+            children: [
+               Expanded(
+                 child: ReusableCard(
+                 colour: Color(0xFF111328),
+                 cardChild: Text("اللعبة الاولى", style: TextStyle( color: Colors.white, fontSize: 50.0,
+                   fontWeight: FontWeight.w900,
+
+                     ),
+                   textAlign: TextAlign.center,
+                 ),
+             onPress: (){
+                   var router = new MaterialPageRoute(
+      builder: (BuildContext context)=> Home());
+       Navigator.of(context).push(router);
+
+    },
+
               ),
+               ),
+              Expanded(
+                child: ReusableCard(
+
+                  colour: Color(0xFF111328),
+                  cardChild: Text("اللعبة التانية", style: TextStyle( color: Colors.white,fontSize: 50.0,
+                    fontWeight: FontWeight.w900,
+                  ),
+                    textAlign: TextAlign.center,
+                  ),
+
+                  onPress: (){
+                    var router = new MaterialPageRoute(
+                        builder: (BuildContext context)=> Quizzler());
+                    Navigator.of(context).push(router);
+
+                  },
+
+                ),
               ),
-              onPressed: () {
-              var router = new MaterialPageRoute(
-                builder: (BuildContext context)=> Home());
-              Navigator.of(context).push(router);
-              //The user picked true.
-             },
-              )),
-          Center(
-               child : FlatButton(
-              textColor: Colors.white,
-              color: Colors.blueGrey,
-              child: Text(
-              "اللعبة الثانية",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-                fontSize: 40.0,
-              ),
-              ),
-              onPressed: (){
-              var router = new MaterialPageRoute(
-               builder: (BuildContext context)=> Quizzler());
-              Navigator.of(context).push(router);
-               },
+            ],
           ),
-    )
-           ],
+        ),
+    );
+  }
+
+}
+
+class ReusableCard extends StatelessWidget {
+  ReusableCard({@required this.colour, this.cardChild, this.onPress});
+
+  final Color colour;
+  final Widget cardChild;
+  final Function onPress;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onPress,
+      child: Container(
+        child: cardChild,
+        margin: EdgeInsets.all(15.0),
+        decoration: BoxDecoration(
+          color: colour,
+          borderRadius: BorderRadius.circular(10.0),
+        ),
       ),
     );
   }
