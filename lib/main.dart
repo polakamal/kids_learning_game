@@ -24,7 +24,7 @@ class _mainscreenState extends State<mainscreen> {
       appBar: new AppBar(
         title: new Text('تعليم اللغة العربية'),
         centerTitle: true,
-       // backgroundColor: Colors.grey,
+        backgroundColor: Colors.blue,
       ),
         body: Center(
           child: Column(
@@ -67,6 +67,7 @@ class _mainscreenState extends State<mainscreen> {
                 ),
               ),
               Expanded(
+
                 child: ReusableCard(
 
                   colour: Color(0xFF111328),

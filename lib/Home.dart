@@ -81,7 +81,7 @@ class _HomeState extends State<Home> {
         }else
         {
           return Container(
-            color: Colors.white,
+            color: Colors.green[50],
             child: Text(choices[element]) ,
             alignment: Alignment.center,
             height: 50,
