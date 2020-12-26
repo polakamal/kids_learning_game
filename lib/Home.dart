@@ -21,6 +21,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: Text(urscore.toString()+ '/' +choices.length.toString()),
+        backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Container(
