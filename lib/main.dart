@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:kidslearinng/Quizzler.dart';
 import 'Home.dart';
+import 'ta3lm.dart';
 void main() {
   runApp(new MaterialApp(
     home: new mainscreen(),
     theme: ThemeData.light().copyWith(
-      primaryColor: Color(0xFF78909c),
-      scaffoldBackgroundColor: Color(0xFF78909c),
+
     ),
   ));
 }
@@ -26,12 +26,12 @@ class _mainscreenState extends State<mainscreen> {
         backgroundColor: Colors.grey,
       ),
         body: Center(
-          child: Row(
+          child: Column(
             children: [
                Expanded(
                  child: ReusableCard(
                  colour: Color(0xFF111328),
-                 cardChild: Text("اللعبة الاولى", style: TextStyle( color: Colors.white, fontSize: 50.0,
+                 cardChild: Text("اللعبة الاولى", style: TextStyle( color: Colors.white, fontSize: 30.0,
                    fontWeight: FontWeight.w900,
 
                      ),
@@ -50,7 +50,7 @@ class _mainscreenState extends State<mainscreen> {
                 child: ReusableCard(
 
                   colour: Color(0xFF111328),
-                  cardChild: Text("اللعبة التانية", style: TextStyle( color: Colors.white,fontSize: 50.0,
+                  cardChild: Text("اللعبة التانية", style: TextStyle( color: Colors.white,fontSize: 30.0,
                     fontWeight: FontWeight.w900,
                   ),
                     textAlign: TextAlign.center,
@@ -59,6 +59,25 @@ class _mainscreenState extends State<mainscreen> {
                   onPress: (){
                     var router = new MaterialPageRoute(
                         builder: (BuildContext context)=> Quizzler());
+                    Navigator.of(context).push(router);
+
+                  },
+
+                ),
+              ),
+              Expanded(
+                child: ReusableCard(
+
+                  colour: Color(0xFF111328),
+                  cardChild: Text("تعلم معنا", style: TextStyle( color: Colors.white,fontSize: 30.0,
+                    fontWeight: FontWeight.w900,
+                  ),
+                    textAlign: TextAlign.center,
+                  ),
+
+                  onPress: (){
+                    var router = new MaterialPageRoute(
+                        builder: (BuildContext context)=> ta3lm());
                     Navigator.of(context).push(router);
 
                   },

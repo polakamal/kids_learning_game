@@ -11,10 +11,19 @@ class Quizzler extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.grey.shade900,
-        body: SafeArea(
-          child: Padding(
+        body: Center(
+          child: Container(
+            constraints: BoxConstraints.expand(),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image:  AssetImage('assets/backround1.jpg'),
+                    fit: BoxFit.cover)
+            ),
+        child:
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: QuizPage(),
+          ),
           ),
         ),
       ),
