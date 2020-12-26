@@ -6,7 +6,8 @@ void main() {
   runApp(new MaterialApp(
     home: new mainscreen(),
     theme: ThemeData.light().copyWith(
-
+      primaryColor: Color(0xFF78909c),
+      scaffoldBackgroundColor: Color(0xFF78909c),
     ),
   ));
 }
@@ -21,9 +22,9 @@ class _mainscreenState extends State<mainscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: new Text('Games'),
+        title: new Text('تعليم اللغة العربية'),
         centerTitle: true,
-        backgroundColor: Colors.grey,
+       // backgroundColor: Colors.grey,
       ),
         body: Center(
           child: Column(

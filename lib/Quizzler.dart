@@ -10,6 +10,10 @@ class Quizzler extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar:AppBar(
+          title:Text('تعليم اللغة العربية'), centerTitle: true,
+
+        ),
         backgroundColor: Colors.grey.shade900,
         body: Center(
           child: Container(
