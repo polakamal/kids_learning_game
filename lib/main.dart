@@ -28,65 +28,96 @@ class _mainscreenState extends State<mainscreen> {
         backgroundColor: Colors.blue,
       ),
         body: Center(
-          child: Column(
-            children: [
-               Expanded(
-                 child: ReusableCard(
-                 colour: Color(0xFF111328),
-                 cardChild: Text("اللعبة الاولى", style: TextStyle( color: Colors.white, fontSize: 30.0,
-                   fontWeight: FontWeight.w900,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 60),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                 Expanded(
+                   child: ReusableCard(
+                   colour: Colors.pinkAccent.shade400,
+                   cardChild: Center(
+                     child: Text("اللعبة الاولى", style: TextStyle( color: Colors.white, fontSize: 30.0,
+                       fontWeight: FontWeight.w900,
+                       shadows: [
+                         Shadow(
+                           blurRadius: 15.0,
+                           color: Colors.black,
+                           offset: Offset(7.0, 7.0),
+                         ),
+                       ],
 
+                         ),
+                       textAlign: TextAlign.center,
                      ),
-                   textAlign: TextAlign.center,
-                 ),
-             onPress: (){
-                  // var router = new MaterialPageRoute(
+                   ),
+               onPress: (){
+                    // var router = new MaterialPageRoute(
       //builder: (BuildContext context)=> Home());
        Navigator.of(context).push(_createRoute3());
 
     },
 
-              ),
-               ),
-              Expanded(
-                child: ReusableCard(
-
-                  colour: Color(0xFF111328),
-                  cardChild: Text("اللعبة التانية", style: TextStyle( color: Colors.white,fontSize: 30.0,
-                    fontWeight: FontWeight.w900,
-                  ),
-                    textAlign: TextAlign.center,
-                  ),
-
-                  onPress: (){
-                    //var router = new MaterialPageRoute(
-                    //    builder: (BuildContext context)=> Quizzler());
-                    Navigator.of(context).push(_createRoute2());
-
-                  },
-
                 ),
-              ),
-              Expanded(
+                 ),
+                Expanded(
+                  child: ReusableCard(
 
-                child: ReusableCard(
+                    colour: Colors.pinkAccent.shade400,
+                    cardChild: Center(
+                      child: Text("اللعبة التانية", style: TextStyle( color: Colors.white,fontSize: 30.0,
+                        fontWeight: FontWeight.w900,
+                        shadows: [
+                          Shadow(
+                            blurRadius: 15.0,
+                            color: Colors.black,
+                            offset: Offset(7.0, 7.0),
+                          ),
+                        ],
+                      ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
 
-                  colour: Color(0xFF111328),
-                  cardChild: Text("تعلم معنا", style: TextStyle( color: Colors.white,fontSize: 30.0,
-                    fontWeight: FontWeight.w900,
+                    onPress: (){
+                      //var router = new MaterialPageRoute(
+                      //    builder: (BuildContext context)=> Quizzler());
+                      Navigator.of(context).push(_createRoute2());
+
+                    },
+
                   ),
-                    textAlign: TextAlign.center,
-                  ),
-
-                  onPress: (){
-
-                    Navigator.of(context).push(_createRoute());
-
-                  },
-
                 ),
-              ),
-            ],
+                Expanded(
+
+                  child: ReusableCard(
+
+                    colour: Colors.pinkAccent.shade400,
+                    cardChild: Center(
+                      child: Text("تعلم معنا", style: TextStyle( color: Colors.white,fontSize: 30.0,
+                        fontWeight: FontWeight.w900,
+                        shadows: [
+                          Shadow(
+                            blurRadius: 15.0,
+                            color: Colors.black,
+                            offset: Offset(7.0, 7.0),
+                          ),
+                        ],
+                      ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+
+                    onPress: (){
+
+                      Navigator.of(context).push(_createRoute());
+
+                    },
+
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
     );
@@ -107,7 +138,7 @@ class ReusableCard extends StatelessWidget {
       onTap: onPress,
       child: Container(
         child: cardChild,
-        margin: EdgeInsets.all(15.0),
+        margin: EdgeInsets.all(20),
         decoration: BoxDecoration(
           color: colour,
           borderRadius: BorderRadius.circular(10.0),

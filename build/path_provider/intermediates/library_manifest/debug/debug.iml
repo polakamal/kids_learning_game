@@ -4,18 +4,6 @@
     <facet type="android" name="Android">
       <configuration />
     </facet>
-    <facet type="android" name="Android2">
-      <configuration />
-    </facet>
-    <facet type="android" name="Android3">
-      <configuration />
-    </facet>
-    <facet type="android" name="Android4">
-      <configuration />
-    </facet>
-    <facet type="android" name="Android5">
-      <configuration />
-    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
