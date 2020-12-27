@@ -1,4 +1,4 @@
-#Sun Dec 27 21:15:42 EET 2020
-base.0=E\:\\kolia\\projects\\flutter\\kids_learning_game\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Sun Dec 27 22:51:55 EET 2020
+base.0=E\:\\kids_learning_game3\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

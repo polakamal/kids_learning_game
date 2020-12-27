@@ -34,7 +34,7 @@ class _mainscreenState extends State<mainscreen> {
     constraints: BoxConstraints.expand(),
     decoration: BoxDecoration(
     image: DecorationImage(
-    image:  AssetImage('assets/bar33.jpg'),
+    image:  AssetImage('assets/bar11.jpg'),
     fit: BoxFit.cover)
     ),
     child:
