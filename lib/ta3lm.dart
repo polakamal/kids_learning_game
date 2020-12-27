@@ -109,66 +109,61 @@ class _State extends State<ta3lm> {
                 ),
 
                 Expanded(
-                  flex: 1,
-                  child:
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment : MainAxisAlignment.spaceBetween,
 
+                        children: <Widget>[
+                          Container(
+                              width: 120,
+                              height: 100,
+                              margin:  EdgeInsets.only(left: 45),
+                            // alignment: Alignment.center,
+                            child: FlatButton(
+                                onPressed: () {
+                                  //advancedPlayer.stop();
+                                  setState(() {
+                                    flag=1;
+                                    if(number!=1)
+                                    {number--;}
+                                    else
+                                    {number=28;}
 
-                  Padding(
-                      padding: EdgeInsets.fromLTRB(45, 30, 30, 30),
-                      //margin: EdgeInsets.symmetric(vertical: 20, horizontal: 45),
-                      //color: Colors.white,
-                      child:  Row(
+                                  });
 
-                        //    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                }, /*color:Colors.white*/
 
-                          children: <Widget>[
-                            Container(
-
-
-                              // alignment: Alignment.center,
+                                child:Image(image: AssetImage('assets/play2.png'), )
+                            ), //Image(image: AssetImage('assets/images/left.png'))
+                          ),
+                            SizedBox(width: 10),
+                          Container(
+                              width: 120,
+                              height: 100,
+                              margin:  EdgeInsets.only(right: 45),
+                            // alignment: Alignment.center,
                               child: FlatButton(
                                   onPressed: () {
-                                    //advancedPlayer.stop();
+                                    //final we=AudioPlayer() ;
+                                    //we.stop();
+                                    // player
+                                    advancedPlayer.stop();
                                     setState(() {
                                       flag=1;
-                                      if(number!=1)
-                                      {number--;}
+                                      if(number!=28)
+
+                                      {number++;}
                                       else
-                                      {number=28;}
+                                      {number=1;}
 
                                     });
 
                                   }, /*color:Colors.white*/
+                                  child:
+                                  Image(image: AssetImage('assets/play.png')))),
+                       ]
 
-                                  child:Image(image: AssetImage('assets/play2.png'), )
-                              ), //Image(image: AssetImage('assets/images/left.png'))
-                            ),
-                            //  SizedBox(width: 35),
-                            Container(
-
-                              // alignment: Alignment.center,
-                                child: FlatButton(
-                                    onPressed: () {
-                                      //final we=AudioPlayer() ;
-                                      //we.stop();
-                                      // player
-                                      advancedPlayer.stop();
-                                      setState(() {
-                                        flag=1;
-                                        if(number!=28)
-
-                                        {number++;}
-                                        else
-                                        {number=1;}
-
-                                      });
-
-                                    }, /*color:Colors.white*/
-                                    child:
-                                    Image(image: AssetImage('assets/play.png')))),
-                          ]
-
-                      )
+                    ),
                   ),
                 )
 
