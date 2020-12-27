@@ -28,7 +28,17 @@ class _mainscreenState extends State<mainscreen> {
         backgroundColor: Colors.blue,
       ),
         body: Center(
-          child: Padding(
+
+          child:
+      Container(
+    constraints: BoxConstraints.expand(),
+    decoration: BoxDecoration(
+    image: DecorationImage(
+    image:  AssetImage('assets/bar33.jpg'),
+    fit: BoxFit.cover)
+    ),
+    child:
+          Padding(
             padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 60),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -54,7 +64,7 @@ class _mainscreenState extends State<mainscreen> {
                onPress: (){
                     // var router = new MaterialPageRoute(
       //builder: (BuildContext context)=> Home());
-       Navigator.of(context).push(_createRoute3());
+       Navigator.of(context).push(_createRoute1());
 
     },
 
@@ -110,7 +120,7 @@ class _mainscreenState extends State<mainscreen> {
 
                     onPress: (){
 
-                      Navigator.of(context).push(_createRoute());
+                      Navigator.of(context).push(_createRoute3());
 
                     },
 
@@ -119,6 +129,7 @@ class _mainscreenState extends State<mainscreen> {
               ],
             ),
           ),
+        ),
         ),
     );
   }
@@ -147,9 +158,9 @@ class ReusableCard extends StatelessWidget {
     );
   }
 }
-Route _createRoute() {
+Route _createRoute1() {
   return PageRouteBuilder(
-      pageBuilder:(context,animation,animationtwo)=>ta3lm(),
+      pageBuilder:(context,animation,animationtwo)=>Home(),
       transitionsBuilder:(context,animation,animationtwo,child)
       {
         var begin =0.0;
@@ -166,7 +177,7 @@ Route _createRoute() {
 }
 Route _createRoute2() {
   return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => Home(),
+    pageBuilder: (context, animation, secondaryAnimation) => Quizzler(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       var begin = Offset(0.0, 1.0);
       var end = Offset.zero;
