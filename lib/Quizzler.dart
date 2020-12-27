@@ -4,7 +4,7 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 import 'quiz_brain.dart';
 
 QuizBrain quizBrain = QuizBrain();
-int score = 0;
+int score = 1;
 class Quizzler extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -51,21 +51,17 @@ class _QuizPageState extends State<QuizPage> {
       //On the next line, you can also use if (quizBrain.isFinished()) {}, it does the same thing.
       if (quizBrain.isFinished() == true) {
         //TODO Step 4 Part A - show an alert using rFlutter_alert,
-
         //This is the code for the basic alert from the docs for rFlutter Alert:
         //Alert(context: context, title: "RFLUTTER", desc: "Flutter is awesome.").show();
-
         //Modified for our purposes:
         Alert(
           context: context,
-          title: 'Finished!',
-
-          desc: 'You\'ve reached the end of the quiz, and you score is '+score.toString(),
+          title: 'تهانيا!',
+          desc: 'لقد انتهيت اللعبة درجتك '+score.toString(),
         ).show();
 
         //TODO Step 4 Part C - reset the questionNumber,
         quizBrain.reset();
-
         //TODO Step 4 Part D - empty out the scoreKeeper.
         scoreKeeper = [];
       }
@@ -111,7 +107,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(15.0),
             child: FlatButton(
               textColor: Colors.white,
-              color: Colors.white54,
+              color: Colors.green,
               child: Text(
                 quizBrain.getChoiceOne(),
                 style: TextStyle(

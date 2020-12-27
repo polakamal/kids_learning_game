@@ -10,8 +10,11 @@ class QuizBrain {
   List<Question> _questionBank = [
     Question(AssetImage('images/gog.png'), false , 'أ','ك' ),
     Question(AssetImage('images/elephant.png'), true, 'ف','ى'),
+    Question(AssetImage('images/erd.png'), false, 'ف','ق'),
     Question(AssetImage('images/Lion-Cartoon.png'), true, 'أ','ت'),
-    Question(AssetImage('images/cat.png'), true, 'ق','ك')
+    Question(AssetImage('images/cat.png'), true, 'ق','ك'),
+    Question(AssetImage('images/boma.png'), false, 'م','ب'),
+    Question(AssetImage('images/zrafa.png'), true, 'ز','ل'),
   ];
 
   void nextQuestion() {
@@ -39,10 +42,7 @@ class QuizBrain {
   bool isFinished() {
     if (_questionNumber >= _questionBank.length-1 ) {
       //TODO: Step 3 Part B - Use a print statement to check that isFinished is returning true when you are indeed at the end of the quiz and when a restart should happen.
-
-      print('Now returning true');
       return true;
-
     } else {
       return false;
     }
