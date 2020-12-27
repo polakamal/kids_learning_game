@@ -45,7 +45,7 @@ class _mainscreenState extends State<mainscreen> {
               children: [
                  Expanded(
                    child: ReusableCard(
-                   colour: Colors.pinkAccent.shade400,
+                   colour: Colors.blue,
                    cardChild: Center(
                      child: Text("اللعبة الاولى", style: TextStyle( color: Colors.white, fontSize: 30.0,
                        fontWeight: FontWeight.w900,
@@ -73,7 +73,7 @@ class _mainscreenState extends State<mainscreen> {
                 Expanded(
                   child: ReusableCard(
 
-                    colour: Colors.pinkAccent.shade400,
+                    colour: Colors.blue,
                     cardChild: Center(
                       child: Text("اللعبة التانية", style: TextStyle( color: Colors.white,fontSize: 30.0,
                         fontWeight: FontWeight.w900,
@@ -102,7 +102,7 @@ class _mainscreenState extends State<mainscreen> {
 
                   child: ReusableCard(
 
-                    colour: Colors.pinkAccent.shade400,
+                    colour: Colors.blue,
                     cardChild: Center(
                       child: Text("تعلم معنا", style: TextStyle( color: Colors.white,fontSize: 30.0,
                         fontWeight: FontWeight.w900,

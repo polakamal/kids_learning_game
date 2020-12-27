@@ -57,7 +57,7 @@ class _QuizPageState extends State<QuizPage> {
         Alert(
           context: context,
           title: 'تهانيا!',
-          desc: 'لقد انتهيت اللعبة درجتك '+score.toString(),
+          desc: 'لقد انتهت اللعبة درجتك '+score.toString()+'/7',
         ).show();
 
         //TODO Step 4 Part C - reset the questionNumber,
