@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kidslearinng/Quizzler.dart';
 import 'Home.dart';
 import 'ta3lm.dart';
+import 'animation.dart';
 void main() {
   runApp(new MaterialApp(
     home: new mainscreen(),
@@ -39,9 +40,9 @@ class _mainscreenState extends State<mainscreen> {
                    textAlign: TextAlign.center,
                  ),
              onPress: (){
-                   var router = new MaterialPageRoute(
-      builder: (BuildContext context)=> Home());
-       Navigator.of(context).push(router);
+                  // var router = new MaterialPageRoute(
+      //builder: (BuildContext context)=> Home());
+       Navigator.of(context).push(_createRoute3());
 
     },
 
@@ -58,9 +59,9 @@ class _mainscreenState extends State<mainscreen> {
                   ),
 
                   onPress: (){
-                    var router = new MaterialPageRoute(
-                        builder: (BuildContext context)=> Quizzler());
-                    Navigator.of(context).push(router);
+                    //var router = new MaterialPageRoute(
+                    //    builder: (BuildContext context)=> Quizzler());
+                    Navigator.of(context).push(_createRoute2());
 
                   },
 
@@ -78,9 +79,8 @@ class _mainscreenState extends State<mainscreen> {
                   ),
 
                   onPress: (){
-                    var router = new MaterialPageRoute(
-                        builder: (BuildContext context)=> ta3lm());
-                    Navigator.of(context).push(router);
+
+                    Navigator.of(context).push(_createRoute());
 
                   },
 
@@ -115,4 +115,55 @@ class ReusableCard extends StatelessWidget {
       ),
     );
   }
+}
+Route _createRoute() {
+  return PageRouteBuilder(
+      pageBuilder:(context,animation,animationtwo)=>ta3lm(),
+      transitionsBuilder:(context,animation,animationtwo,child)
+      {
+        var begin =0.0;
+        var end =1.0;
+        var tween= Tween(begin:begin,end:end);
+        var curvesanimation=CurvedAnimation(parent:animation, curve:Curves.linearToEaseOut);
+        return ScaleTransition(
+            scale:tween.animate(curvesanimation),
+            child:RotationTransition(turns: tween.animate(curvesanimation),child: child));
+
+
+      }
+  );
+}
+Route _createRoute2() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => Home(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      var begin = Offset(0.0, 1.0);
+      var end = Offset.zero;
+      var curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+      return SlideTransition(
+        position: animation.drive(tween),
+        child: child,
+      );
+    },
+  );
+}
+Route _createRoute3() {
+  return PageRouteBuilder(
+      pageBuilder:(context,animation,animationtwo)=>ta3lm(),
+      transitionsBuilder:(context,animation,animationtwo,child)
+      {
+        var begin =0.0;
+        var end =1.0;
+        var tween= Tween(begin:begin,end:end);
+        var curvesanimation=CurvedAnimation(parent:animation, curve:Curves.linearToEaseOut);
+        return ScaleTransition(
+            scale:tween.animate(curvesanimation),
+            child:RotationTransition(turns: tween.animate(curvesanimation),child: child));
+
+
+      }
+  );
 }

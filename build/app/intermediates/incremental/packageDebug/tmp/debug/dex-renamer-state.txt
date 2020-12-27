@@ -1,4 +1,4 @@
-#Sun Dec 27 01:04:44 EET 2020
+#Sun Dec 27 02:30:40 EET 2020
 base.0=E\:\\kids_learning_game\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

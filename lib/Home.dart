@@ -41,6 +41,7 @@ class _HomeState extends State<Home> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: choices.keys.map((element) {
                   return Expanded(
+                    flex: 1,
                     child: Draggable<String>(
                       data: element,
                       child: Movable(Score[element] ==true ? '✔️': element ),
