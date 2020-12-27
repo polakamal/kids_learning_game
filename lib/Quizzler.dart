@@ -72,12 +72,12 @@ class _QuizPageState extends State<QuizPage> {
           score++;
           scoreKeeper.add(Icon(
             Icons.check,
-            color: Colors.grey,
+            color: Colors.black87,
           ));
         } else {
           scoreKeeper.add(Icon(
             Icons.close,
-            color: Colors.red,
+            color: Colors.black
           ));
         }
         quizBrain.nextQuestion();
